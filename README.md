@@ -1,11 +1,11 @@
 # scrcpy GUI
 
 <p align="center">
-  <a href="#"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/36x27/country-4x3/us.png" height="20"> <b>English</b></a>
+  <a href="#"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/us.png" height="20"> <b>English</b></a>
   &nbsp;|&nbsp;
-  <a href="README_RU.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/36x27/country-4x3/ru.png" height="20"> Русский</a>
+  <a href="README_RU.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/ru.png" height="20"> Русский</a>
   &nbsp;|&nbsp;
-  <a href="README_CN.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/36x27/country-4x3/cn.png" height="20"> 中文</a>
+  <a href="README_CN.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/cn.png" height="20"> 中文</a>
 </p>
 
 A GUI wrapper for [scrcpy](https://github.com/Genymobile/scrcpy) — record your Android screen in one click.

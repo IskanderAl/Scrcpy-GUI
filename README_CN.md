@@ -1,11 +1,11 @@
 # scrcpy GUI
 
 <p align="center">
-  <a href="README.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/36x27/country-4x3/us.png" height="20"> English</a>
+  <a href="README.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/us.png" height="20"> English</a>
   &nbsp;|&nbsp;
-  <a href="README_RU.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/36x27/country-4x3/ru.png" height="20"> Русский</a>
+  <a href="README_RU.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/ru.png" height="20"> Русский</a>
   &nbsp;|&nbsp;
-  <a href="#"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/36x27/country-4x3/cn.png" height="20"> <b>中文</b></a>
+  <a href="#"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/cn.png" height="20"> <b>中文</b></a>
 </p>
 
 [scrcpy](https://github.com/Genymobile/scrcpy) 的图形界面封装 — 一键录制 Android 设备屏幕。

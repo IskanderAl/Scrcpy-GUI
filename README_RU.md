@@ -1,11 +1,11 @@
 # scrcpy GUI
 
 <p align="center">
-  <a href="README.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/36x27/country-4x3/us.png" height="20"> English</a>
+  <a href="README.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/us.png" height="20"> English</a>
   &nbsp;|&nbsp;
-  <a href="#"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/36x27/country-4x3/ru.png" height="20"> <b>Русский</b></a>
+  <a href="#"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/ru.png" height="20"> <b>Русский</b></a>
   &nbsp;|&nbsp;
-  <a href="README_CN.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/36x27/country-4x3/cn.png" height="20"> 中文</a>
+  <a href="README_CN.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/cn.png" height="20"> 中文</a>
 </p>
 
 GUI-обёртка для [scrcpy](https://github.com/Genymobile/scrcpy) — запись экрана Android-устройства в один клик.
