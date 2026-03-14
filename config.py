@@ -18,4 +18,18 @@ def find_scrcpy() -> str | None:
     return shutil.which("scrcpy")
 
 
+def find_adb() -> str | None:
+    """Find adb.exe: first next to the app, then in PATH."""
+    local = os.path.join(get_app_dir(), "adb.exe")
+    if os.path.isfile(local):
+        return local
+    return shutil.which("adb")
+
+
 DEFAULT_RECORD_DIR = os.path.join(os.path.expanduser("~"), "Videos")
+
+RESOLUTIONS = ["Original", "1920", "1280", "720"]
+BITRATES = ["8M", "4M", "2M"]
+FPS_OPTIONS = ["60", "30", "15"]
+FORMATS = ["mkv", "mp4"]
+ORIENTATIONS = ["Auto", "Portrait", "Landscape"]
