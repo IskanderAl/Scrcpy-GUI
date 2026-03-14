@@ -1,57 +1,60 @@
 # scrcpy GUI
 
-GUI-обёртка для [scrcpy](https://github.com/Genymobile/scrcpy) — запись экрана Android-устройства в один клик.
-Сделано для QA-тестировщиков.
+> **Language / Язык / 语言:**
+> [**:us: English**](#) | [:ru: Русский](README_RU.md) | [:cn: 中文](README_CN.md)
 
-## Установка
+A GUI wrapper for [scrcpy](https://github.com/Genymobile/scrcpy) — record your Android screen in one click.
+Built for QA testers.
 
-### Способ 1 — Установщик (рекомендуется)
+## Installation
 
-1. Перейди в [Releases](../../releases/latest)
-2. Скачай `scrcpy-gui-setup-v1.0.0.exe`
-3. Запусти → выбери компоненты → установи
-4. Ярлык появится на рабочем столе
+### Option 1 — Installer (recommended)
 
-> Если у тебя уже есть scrcpy или adb — можно снять галочки при установке.
+1. Go to [Releases](../../releases/latest)
+2. Download `scrcpy-gui-setup-v1.0.0.exe`
+3. Run it → select components → install
+4. A desktop shortcut will be created
 
-### Способ 2 — ZIP-архив
+> If you already have scrcpy or adb installed, you can uncheck them during setup.
 
-1. Скачай `scrcpy-gui-v1.0.0-win64.zip` из [Releases](../../releases/latest)
-2. Распакуй в любую папку
-3. Запусти `scrcpy-gui.exe`
+### Option 2 — ZIP archive
 
-### Способ 3 — Из исходников
+1. Download `scrcpy-gui-v1.0.0-win64.zip` from [Releases](../../releases/latest)
+2. Extract to any folder
+3. Run `scrcpy-gui.exe`
+
+### Option 3 — From source
 
 ```bash
 pip install customtkinter
 python main.py
 ```
 
-Требуется `scrcpy.exe` рядом с `main.py` или в PATH.
+Requires `scrcpy.exe` next to `main.py` or in PATH.
 
-## Требования
+## Requirements
 
 - Windows 10+
-- Android-устройство с включённой USB-отладкой
-- USB-кабель
+- Android device with USB debugging enabled
+- USB cable
 
-### Как включить USB-отладку
+### How to enable USB debugging
 
-1. **Настройки** > **О телефоне** > 7 раз нажать на **Номер сборки**
-2. **Настройки** > **Для разработчиков** > включить **Отладка по USB**
-3. Подключить телефон по USB и разрешить отладку во всплывающем окне
+1. **Settings** > **About phone** > Tap **Build number** 7 times
+2. **Settings** > **Developer options** > Enable **USB debugging**
+3. Connect the phone via USB and allow debugging in the popup
 
-## Использование
+## Usage
 
-1. Подключи устройство по USB
-2. Запусти **scrcpy GUI**
-3. Выбери папку для сохранения
-4. Нажми **Start Recording**
-5. Когда закончишь — нажми **Stop Recording**
-6. Файл сохранится как `record_YYYY-MM-DD_HH-MM-SS.mkv`
+1. Connect your device via USB
+2. Launch **scrcpy GUI**
+3. Choose a save folder
+4. Click **Start Recording**
+5. When done — click **Stop Recording**
+6. The file will be saved as `record_YYYY-MM-DD_HH-MM-SS.mkv`
 
-## Лицензия
+## License
 
-Этот проект использует [scrcpy](https://github.com/Genymobile/scrcpy) (Genymobile / Romain Vimont), распространяемый под лицензией [Apache License 2.0](https://github.com/Genymobile/scrcpy/blob/master/LICENSE).
+This project uses [scrcpy](https://github.com/Genymobile/scrcpy) (Genymobile / Romain Vimont), distributed under the [Apache License 2.0](https://github.com/Genymobile/scrcpy/blob/master/LICENSE).
 
-scrcpy GUI является независимой обёрткой и не модифицирует scrcpy.
+scrcpy GUI is an independent wrapper and does not modify scrcpy.
