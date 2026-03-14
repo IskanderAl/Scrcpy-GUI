@@ -1,7 +1,7 @@
 # scrcpy GUI
 
-> **Language / Язык / 语言:**
-> [:us: English](README.md) | [**:ru: Русский**](#) | [:cn: 中文](README_CN.md)
+> 🌐 **Language / Язык / 语言:**
+> [🇺🇸 English](README.md) | [**🇷🇺 Русский**](#) | [🇨🇳 中文](README_CN.md)
 
 GUI-обёртка для [scrcpy](https://github.com/Genymobile/scrcpy) — запись экрана Android-устройства в один клик.
 Сделано для QA-тестировщиков.

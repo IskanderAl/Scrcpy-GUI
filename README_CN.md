@@ -1,7 +1,7 @@
 # scrcpy GUI
 
-> **Language / Язык / 语言:**
-> [:us: English](README.md) | [:ru: Русский](README_RU.md) | [**:cn: 中文**](#)
+> 🌐 **Language / Язык / 语言:**
+> [🇺🇸 English](README.md) | [🇷🇺 Русский](README_RU.md) | [**🇨🇳 中文**](#)
 
 [scrcpy](https://github.com/Genymobile/scrcpy) 的图形界面封装 — 一键录制 Android 设备屏幕。
 专为 QA 测试人员打造。

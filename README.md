@@ -1,7 +1,7 @@
 # scrcpy GUI
 
-> **Language / Язык / 语言:**
-> [**:us: English**](#) | [:ru: Русский](README_RU.md) | [:cn: 中文](README_CN.md)
+> 🌐 **Language / Язык / 语言:**
+> [**🇺🇸 English**](#) | [🇷🇺 Русский](README_RU.md) | [🇨🇳 中文](README_CN.md)
 
 A GUI wrapper for [scrcpy](https://github.com/Genymobile/scrcpy) — record your Android screen in one click.
 Built for QA testers.
