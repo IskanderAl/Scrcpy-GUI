@@ -6,6 +6,8 @@
   <a href="#"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/ru.png" height="20"> <b>Русский</b></a>
   &nbsp;|&nbsp;
   <a href="README_CN.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/cn.png" height="20"> 中文</a>
+  &nbsp;|&nbsp;
+  <a href="README_KZ.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/kz.png" height="20"> Қазақша</a>
 </p>
 
 GUI-обёртка для [scrcpy](https://github.com/Genymobile/scrcpy) — запись экрана Android-устройства в один клик.
