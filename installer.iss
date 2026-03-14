@@ -5,6 +5,7 @@ AppPublisher=IskanderAl
 AppPublisherURL=https://github.com/IskanderAl/Scrcpy-GUI
 DefaultDirName={autopf}\scrcpy-gui
 DefaultGroupName=scrcpy GUI
+SetupIconFile=dist\icon.ico
 UninstallDisplayIcon={app}\scrcpy-gui.exe
 OutputDir=installer_output
 OutputBaseFilename=scrcpy-gui-setup-v2.0.0
@@ -25,6 +26,7 @@ Name: "dlls"; Description: "Required DLL libraries"; Types: full custom; Flags: 
 [Files]
 ; Main app (always installed)
 Source: "dist\scrcpy-gui.exe"; DestDir: "{app}"; Components: app; Flags: ignoreversion
+Source: "dist\icon.ico"; DestDir: "{app}"; Components: app; Flags: ignoreversion
 
 ; scrcpy (optional)
 Source: "dist\scrcpy.exe"; DestDir: "{app}"; Components: scrcpy; Flags: ignoreversion
@@ -44,9 +46,9 @@ Source: "dist\libusb-1.0.dll"; DestDir: "{app}"; Components: dlls; Flags: ignore
 Source: "dist\swresample-5.dll"; DestDir: "{app}"; Components: dlls; Flags: ignoreversion
 
 [Icons]
-Name: "{group}\scrcpy GUI"; Filename: "{app}\scrcpy-gui.exe"
+Name: "{group}\scrcpy GUI"; Filename: "{app}\scrcpy-gui.exe"; IconFilename: "{app}\icon.ico"
 Name: "{group}\Uninstall scrcpy GUI"; Filename: "{uninstallexe}"
-Name: "{autodesktop}\scrcpy GUI"; Filename: "{app}\scrcpy-gui.exe"; Tasks: desktopicon
+Name: "{autodesktop}\scrcpy GUI"; Filename: "{app}\scrcpy-gui.exe"; IconFilename: "{app}\icon.ico"; Tasks: desktopicon
 
 [Tasks]
 Name: "desktopicon"; Description: "Create a desktop shortcut"; GroupDescription: "Additional:"

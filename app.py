@@ -1,3 +1,4 @@
+import os
 import tkinter as tk
 from datetime import datetime
 from tkinter import filedialog
@@ -6,7 +7,7 @@ import customtkinter as ctk
 
 from config import (
     DEFAULT_RECORD_DIR, RESOLUTIONS, BITRATES, FPS_OPTIONS, FORMATS,
-    ORIENTATIONS, find_scrcpy,
+    ORIENTATIONS, find_scrcpy, get_app_dir,
 )
 from recorder import Recorder
 
@@ -21,6 +22,10 @@ class App(ctk.CTk):
         self.title("scrcpy GUI v2.0")
         self.geometry("360x720")
         self.resizable(False, False)
+
+        icon_path = os.path.join(get_app_dir(), "icon.ico")
+        if os.path.isfile(icon_path):
+            self.iconbitmap(icon_path)
 
         self.recorder = Recorder()
         self._timer_id = None
@@ -46,10 +51,12 @@ class App(ctk.CTk):
             command=self._refresh_device)
         self.btn_refresh.pack(side="right")
 
-        self.lbl_device = ctk.CTkLabel(self, text="Searching...",
-                                       font=ctk.CTkFont(size=13),
-                                       text_color="#aaaaaa")
-        self.lbl_device.pack(anchor="w", padx=12, pady=(2, 4))
+        self._devices: list[tuple[str, str]] = []  # (serial, model)
+        self.var_device = tk.StringVar(value="Searching...")
+        self.cmb_device = ctk.CTkComboBox(
+            self, variable=self.var_device, values=[],
+            width=330, height=28, state="readonly")
+        self.cmb_device.pack(anchor="w", padx=12, pady=(2, 4))
 
         # ── Mirror button ──
         frm_mirror = ctk.CTkFrame(self, fg_color="transparent")
@@ -176,16 +183,33 @@ class App(ctk.CTk):
         if d:
             self.var_dir.set(d)
 
+    def _get_selected_serial(self) -> str | None:
+        """Return the serial of the currently selected device, or None."""
+        idx = None
+        current = self.var_device.get()
+        for i, (serial, model) in enumerate(self._devices):
+            display = f"{model}  ({serial})" if model != serial else serial
+            if display == current:
+                idx = i
+                break
+        if idx is not None:
+            return self._devices[idx][0]
+        return self._devices[0][0] if self._devices else None
+
     def _refresh_device(self):
-        self.lbl_device.configure(text="Searching...")
+        self.var_device.set("Searching...")
         self.update_idletasks()
-        device = self.recorder.get_device()
-        if device:
-            self.lbl_device.configure(text=f"Connected: {device}",
-                                      text_color="#2ecc71")
+        self._devices = self.recorder.get_devices()
+        if self._devices:
+            display_list = []
+            for serial, model in self._devices:
+                name = f"{model}  ({serial})" if model != serial else serial
+                display_list.append(name)
+            self.cmb_device.configure(values=display_list)
+            self.var_device.set(display_list[0])
         else:
-            self.lbl_device.configure(text="No device found",
-                                      text_color="#e74c3c")
+            self.cmb_device.configure(values=["No device found"])
+            self.var_device.set("No device found")
 
     # ── Mirror ─────────────────────────────────────────
 
@@ -200,7 +224,8 @@ class App(ctk.CTk):
             return
 
         try:
-            self.recorder.mirror(show_touches=self.var_touches.get())
+            self.recorder.mirror(serial=self._get_selected_serial(),
+                                 show_touches=self.var_touches.get())
         except RuntimeError as e:
             self.lbl_status.configure(text=str(e), text_color="#e74c3c")
             return
@@ -249,6 +274,7 @@ class App(ctk.CTk):
                 audio=self.var_audio.get(),
                 orientation=self.var_orientation.get(),
                 show_touches=self.var_touches.get(),
+                serial=self._get_selected_serial(),
             )
         except RuntimeError as e:
             self.lbl_status.configure(text=str(e), text_color="#e74c3c")

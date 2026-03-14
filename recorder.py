@@ -29,30 +29,37 @@ class Recorder:
     def start_time(self) -> datetime | None:
         return self._start_time
 
-    def get_device(self) -> str | None:
-        """Get connected device name via adb devices."""
+    def get_devices(self) -> list[tuple[str, str]]:
+        """Get list of connected devices via adb devices.
+
+        Returns list of (serial, display_name) tuples.
+        """
         adb = find_adb()
         if adb is None:
-            return None
+            return []
         try:
             result = subprocess.run(
                 [adb, "devices", "-l"],
                 capture_output=True, text=True, timeout=5,
                 creationflags=subprocess.CREATE_NO_WINDOW,
             )
+            devices = []
             for line in result.stdout.strip().splitlines()[1:]:
                 if "device" in line and "offline" not in line:
-                    # Extract model if available
                     parts = line.split()
+                    serial = parts[0]
+                    model = serial  # fallback
                     for part in parts:
                         if part.startswith("model:"):
-                            return part.split(":", 1)[1]
-                    return parts[0]  # fallback to serial
+                            model = part.split(":", 1)[1]
+                            break
+                    devices.append((serial, model))
+            return devices
         except Exception:
-            pass
-        return None
+            return []
 
-    def mirror(self, show_touches: bool = False) -> None:
+    def mirror(self, serial: str | None = None,
+              show_touches: bool = False) -> None:
         """Start mirroring only (no recording)."""
         if self.is_mirroring:
             return  # already mirroring
@@ -64,6 +71,8 @@ class Recorder:
             )
 
         cmd = [scrcpy_path]
+        if serial:
+            cmd += ["-s", serial]
         if show_touches:
             cmd.append("--show-touches")
 
@@ -93,7 +102,8 @@ class Recorder:
               max_size: str = "Original", bitrate: str = "4M",
               fps: str = "60", audio: bool = True,
               orientation: str = "Auto",
-              show_touches: bool = False) -> str:
+              show_touches: bool = False,
+              serial: str | None = None) -> str:
         """Start recording with given settings. Returns the output file path."""
         if self.is_recording:
             raise RuntimeError("Already recording")
@@ -111,6 +121,9 @@ class Recorder:
         self._output_path = os.path.join(output_dir, filename)
 
         cmd = [scrcpy_path, "--record", self._output_path]
+
+        if serial:
+            cmd += ["-s", serial]
 
         if max_size != "Original":
             cmd += ["--max-size", max_size]
