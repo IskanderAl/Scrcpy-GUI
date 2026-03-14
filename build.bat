@@ -3,7 +3,7 @@ set VERSION=2.1.0
 set SCRCPY_SRC=H:\Projects\ScrpyInterface
 
 echo [1/3] Building scrcpy-gui.exe...
-pyinstaller --onefile --windowed --icon=icon.ico --name=scrcpy-gui main.py
+pyinstaller --onefile --windowed --icon=icon.ico --hidden-import=customtkinter --collect-all=customtkinter --name=scrcpy-gui main.py
 if errorlevel 1 goto :error
 
 echo [2/3] Copying scrcpy files to dist...
