@@ -10,15 +10,23 @@
   <a href="README_KZ.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/kz.png" height="20"> Қазақша</a>
 </p>
 
-A GUI wrapper for [scrcpy](https://github.com/Genymobile/scrcpy) — record your Android screen in one click.
+A GUI wrapper for [scrcpy](https://github.com/Genymobile/scrcpy) — mirror and record your Android screen with ease.
 Built for QA testers.
+
+## Features
+
+- **Mirror Screen** — real-time device mirroring in a separate window
+- **Screen Recording** — record with live timer display
+- **Device Auto-Detection** — shows connected device model automatically
+- **Configurable Settings** — format (MKV/MP4), resolution, bitrate, FPS, orientation, audio, show touches
+- **Smart Process Management** — auto-closes mirror when recording starts, detects when scrcpy window is closed
 
 ## Installation
 
 ### Option 1 — Installer (recommended)
 
 1. Go to [Releases](../../releases/latest)
-2. Download `scrcpy-gui-setup-v1.0.0.exe`
+2. Download `scrcpy-gui-setup-v2.0.0.exe`
 3. Run it → select components → install
 4. A desktop shortcut will be created
 
@@ -26,7 +34,7 @@ Built for QA testers.
 
 ### Option 2 — ZIP archive
 
-1. Download `scrcpy-gui-v1.0.0-win64.zip` from [Releases](../../releases/latest)
+1. Download `scrcpy-gui-v2.0.0-win64.zip` from [Releases](../../releases/latest)
 2. Extract to any folder
 3. Run `scrcpy-gui.exe`
 
@@ -54,11 +62,11 @@ Requires `scrcpy.exe` next to `main.py` or in PATH.
 ## Usage
 
 1. Connect your device via USB
-2. Launch **scrcpy GUI**
-3. Choose a save folder
-4. Click **Start Recording**
-5. When done — click **Stop Recording**
-6. The file will be saved as `record_YYYY-MM-DD_HH-MM-SS.mkv`
+2. Launch **scrcpy GUI** — the device name appears automatically
+3. Click **Mirror Screen** to open a live mirror window
+4. Adjust settings: format, resolution, bitrate, FPS, orientation, audio
+5. Click **Record** — mirror closes, recording starts with a live timer
+6. Click **Stop** — file is saved as `record_YYYY-MM-DD_HH-MM-SS.mkv`
 
 ## License
 

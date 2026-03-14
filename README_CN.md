@@ -10,15 +10,23 @@
   <a href="README_KZ.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/kz.png" height="20"> Қазақша</a>
 </p>
 
-[scrcpy](https://github.com/Genymobile/scrcpy) 的图形界面封装 — 一键录制 Android 设备屏幕。
+[scrcpy](https://github.com/Genymobile/scrcpy) 的图形界面封装 — 轻松镜像和录制 Android 设备屏幕。
 专为 QA 测试人员打造。
+
+## 功能特性
+
+- **屏幕镜像** — 在独立窗口中实时显示设备画面
+- **屏幕录制** — 录制时实时显示计时器
+- **自动检测设备** — 自动显示已连接设备的型号
+- **灵活设置** — 格式（MKV/MP4）、分辨率、码率、帧率、方向、音频、显示触摸
+- **智能进程管理** — 开始录制时自动关闭镜像，检测 scrcpy 窗口关闭
 
 ## 安装
 
 ### 方式一 — 安装程序（推荐）
 
 1. 前往 [Releases](../../releases/latest)
-2. 下载 `scrcpy-gui-setup-v1.0.0.exe`
+2. 下载 `scrcpy-gui-setup-v2.0.0.exe`
 3. 运行 → 选择组件 → 安装
 4. 桌面将出现快捷方式
 
@@ -26,7 +34,7 @@
 
 ### 方式二 — ZIP 压缩包
 
-1. 从 [Releases](../../releases/latest) 下载 `scrcpy-gui-v1.0.0-win64.zip`
+1. 从 [Releases](../../releases/latest) 下载 `scrcpy-gui-v2.0.0-win64.zip`
 2. 解压到任意文件夹
 3. 运行 `scrcpy-gui.exe`
 
@@ -54,11 +62,11 @@ python main.py
 ## 使用方法
 
 1. 通过 USB 连接设备
-2. 启动 **scrcpy GUI**
-3. 选择保存文件夹
-4. 点击 **Start Recording**
-5. 完成后点击 **Stop Recording**
-6. 文件将保存为 `record_YYYY-MM-DD_HH-MM-SS.mkv`
+2. 启动 **scrcpy GUI** — 设备名称自动显示
+3. 点击 **Mirror Screen** — 打开实时镜像窗口
+4. 调整设置：格式、分辨率、码率、帧率、方向、音频
+5. 点击 **Record** — 镜像关闭，录制开始并显示计时器
+6. 点击 **Stop** — 文件保存为 `record_YYYY-MM-DD_HH-MM-SS.mkv`
 
 ## 许可证
 
