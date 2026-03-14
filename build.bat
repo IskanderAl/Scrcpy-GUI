@@ -1,5 +1,5 @@
 @echo off
-set VERSION=2.0.0
+set VERSION=2.1.0
 set SCRCPY_SRC=H:\Projects\ScrpyInterface
 
 echo [1/3] Building scrcpy-gui.exe...

@@ -1,6 +1,6 @@
 [Setup]
 AppName=scrcpy GUI
-AppVersion=2.0.0
+AppVersion=2.1.0
 AppPublisher=IskanderAl
 AppPublisherURL=https://github.com/IskanderAl/Scrcpy-GUI
 DefaultDirName={autopf}\scrcpy-gui
@@ -8,7 +8,7 @@ DefaultGroupName=scrcpy GUI
 SetupIconFile=dist\icon.ico
 UninstallDisplayIcon={app}\scrcpy-gui.exe
 OutputDir=installer_output
-OutputBaseFilename=scrcpy-gui-setup-v2.0.0
+OutputBaseFilename=scrcpy-gui-setup-v2.1.0
 Compression=lzma2
 SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64compatible

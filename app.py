@@ -19,7 +19,7 @@ class App(ctk.CTk):
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("blue")
 
-        self.title("scrcpy GUI v2.0")
+        self.title("scrcpy GUI v2.1")
         self.geometry("360x720")
         self.resizable(False, False)
 

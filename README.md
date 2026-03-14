@@ -8,6 +8,10 @@
   <a href="README_CN.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/cn.png" height="20"> 中文</a>
   &nbsp;|&nbsp;
   <a href="README_KZ.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/kz.png" height="20"> Қазақша</a>
+  &nbsp;|&nbsp;
+  <a href="README_UA.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/ua.png" height="20"> Українська</a>
+  &nbsp;|&nbsp;
+  <a href="README_BY.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/by.png" height="20"> Беларуская</a>
 </p>
 
 A GUI wrapper for [scrcpy](https://github.com/Genymobile/scrcpy) — mirror and record your Android screen with ease.
@@ -17,8 +21,10 @@ Built for QA testers.
 
 - **Mirror Screen** — real-time device mirroring in a separate window
 - **Screen Recording** — record with live timer display
+- **Multi-Device Support** — select from multiple connected devices
 - **Device Auto-Detection** — shows connected device model automatically
 - **Configurable Settings** — format (MKV/MP4), resolution, bitrate, FPS, orientation, audio, show touches
+- **Custom App Icon** — branded QA icon for easy identification
 - **Smart Process Management** — auto-closes mirror when recording starts, detects when scrcpy window is closed
 
 ## Installation
@@ -26,7 +32,7 @@ Built for QA testers.
 ### Option 1 — Installer (recommended)
 
 1. Go to [Releases](../../releases/latest)
-2. Download `scrcpy-gui-setup-v2.0.0.exe`
+2. Download `scrcpy-gui-setup-v2.1.0.exe`
 3. Run it → select components → install
 4. A desktop shortcut will be created
 
@@ -34,7 +40,7 @@ Built for QA testers.
 
 ### Option 2 — ZIP archive
 
-1. Download `scrcpy-gui-v2.0.0-win64.zip` from [Releases](../../releases/latest)
+1. Download `scrcpy-gui-v2.1.0-win64.zip` from [Releases](../../releases/latest)
 2. Extract to any folder
 3. Run `scrcpy-gui.exe`
 
@@ -63,10 +69,11 @@ Requires `scrcpy.exe` next to `main.py` or in PATH.
 
 1. Connect your device via USB
 2. Launch **scrcpy GUI** — the device name appears automatically
-3. Click **Mirror Screen** to open a live mirror window
-4. Adjust settings: format, resolution, bitrate, FPS, orientation, audio
-5. Click **Record** — mirror closes, recording starts with a live timer
-6. Click **Stop** — file is saved as `record_YYYY-MM-DD_HH-MM-SS.mkv`
+3. If multiple devices are connected — select one from the dropdown
+4. Click **Mirror Screen** to open a live mirror window
+5. Adjust settings: format, resolution, bitrate, FPS, orientation, audio
+6. Click **Record** — mirror closes, recording starts with a live timer
+7. Click **Stop** — file is saved as `record_YYYY-MM-DD_HH-MM-SS.mkv`
 
 ## License
 

@@ -8,6 +8,10 @@
   <a href="README_CN.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/cn.png" height="20"> 中文</a>
   &nbsp;|&nbsp;
   <a href="#"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/kz.png" height="20"> <b>Қазақша</b></a>
+  &nbsp;|&nbsp;
+  <a href="README_UA.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/ua.png" height="20"> Українська</a>
+  &nbsp;|&nbsp;
+  <a href="README_BY.md"><img src="https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/by.png" height="20"> Беларуская</a>
 </p>
 
 [scrcpy](https://github.com/Genymobile/scrcpy) үшін GUI-қабықша — Android құрылғысының экранын айналау және жазу.
@@ -17,8 +21,10 @@ QA-тестілеушілерге арналған.
 
 - **Экранды айналау** — құрылғыны бөлек терезеде нақты уақытта көрсету
 - **Экранды жазу** — нақты уақыттағы таймермен жазу
+- **Бірнеше құрылғыны қолдау** — қосылған құрылғылар тізімінен таңдау
 - **Құрылғыны автоанықтау** — қосылған құрылғының моделін автоматты көрсетеді
 - **Икемді баптаулар** — формат (MKV/MP4), ажыратымдылық, битрейт, FPS, бағдар, аудио, түрту көрсету
+- **Арнайы белгіше** — QA брендтік белгішесі, оңай тану үшін
 - **Ақылды процесс басқару** — жазу басталғанда айналауды автоматты жабады, scrcpy терезесінің жабылуын қадағалайды
 
 ## Орнату
@@ -26,7 +32,7 @@ QA-тестілеушілерге арналған.
 ### 1-тәсіл — Орнатушы (ұсынылады)
 
 1. [Releases](../../releases/latest) бетіне өт
-2. `scrcpy-gui-setup-v2.0.0.exe` файлын жүктеп ал
+2. `scrcpy-gui-setup-v2.1.0.exe` файлын жүктеп ал
 3. Іске қос → компоненттерді таңда → орнат
 4. Жұмыс үстелінде таңбаша пайда болады
 
@@ -34,7 +40,7 @@ QA-тестілеушілерге арналған.
 
 ### 2-тәсіл — ZIP-мұрағат
 
-1. [Releases](../../releases/latest) бетінен `scrcpy-gui-v2.0.0-win64.zip` жүктеп ал
+1. [Releases](../../releases/latest) бетінен `scrcpy-gui-v2.1.0-win64.zip` жүктеп ал
 2. Кез келген қалтаға шығар
 3. `scrcpy-gui.exe` іске қос
 
@@ -63,10 +69,11 @@ python main.py
 
 1. Құрылғыны USB арқылы қос
 2. **scrcpy GUI** іске қос — құрылғы атауы автоматты анықталады
-3. **Mirror Screen** бас — айналау терезесі ашылады
-4. Баптауларды реттеу: формат, ажыратымдылық, битрейт, FPS, бағдар, аудио
-5. **Record** бас — айналау жабылады, таймермен жазу басталады
-6. **Stop** бас — файл `record_YYYY-MM-DD_HH-MM-SS.mkv` ретінде сақталады
+3. Бірнеше құрылғы қосылған болса — тізімнен қажеттісін таңда
+4. **Mirror Screen** бас — айналау терезесі ашылады
+5. Баптауларды реттеу: формат, ажыратымдылық, битрейт, FPS, бағдар, аудио
+6. **Record** бас — айналау жабылады, таймермен жазу басталады
+7. **Stop** бас — файл `record_YYYY-MM-DD_HH-MM-SS.mkv` ретінде сақталады
 
 ## Лицензия
 
